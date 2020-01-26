@@ -28,7 +28,7 @@ body {
 
 .contenedor-comentario {
 
-    margin: 20px 0;
+    margin: 12px 0;
 
     padding: 20px;
     box-shadow: 0 0 8px #00d9d9;
@@ -44,7 +44,7 @@ body {
 
 .comentario {
     margin-left: 50px;
-
+    margin-top: 15px;
 }
 
 #btn-enviar {
