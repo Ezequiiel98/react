@@ -32,7 +32,7 @@ body {
 
     padding: 20px;
     box-shadow: 0 0 8px #00d9d9;
-    animation-duration: 1s;
+    animation-duration: 1.5s;
     animation-name: comentario;
 
 }
@@ -110,14 +110,21 @@ body {
 }
 
 @keyframes comentario {
-    from {
+    0% {
         opacity: 0;
-        transform: translateX(-20px);
-
+        transform: translateY(20px);
+        box-shadow: none;
+      
     }
 
-    to {
+    30% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
+      
+        }
+
+    100%{
+        box-shadow: 0 0 8px #00d9d9;
+       
     }
 }
