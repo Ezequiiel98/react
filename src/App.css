@@ -1,0 +1,123 @@
+body {
+    background-color: #202020;
+    color: white;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+
+}
+
+.titulo-comentarios {
+    text-align: center;
+}
+
+.comentarios,
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.comentarios {
+    min-width: 520px;
+    max-width: 520px;
+}
+
+.contenedor-comentario {
+
+    margin: 20px 0;
+
+    padding: 20px;
+    box-shadow: 0 0 8px #00d9d9;
+    animation-duration: 1s;
+    animation-name: comentario;
+
+}
+
+.nombre {
+    margin: 0;
+    color: white;
+}
+
+.comentario {
+    margin-left: 50px;
+
+}
+
+#btn-enviar {
+    padding: 18px;
+    width: 120px;
+    text-align: center;
+    align-self: flex-end;
+    margin: 15px 3px;
+    border-radius: 7px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+    transition: all .5s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#btn-enviar:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+
+
+}
+
+.contenedor-input {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+
+}
+
+.contenedor-input label {
+    margin: 15px 0;
+}
+
+.contenedor-input input {
+    padding: 10px;
+    max-width: 200px;
+    border-radius: 5px;
+
+}
+
+.contenedor-input textarea {
+    padding: 10px;
+    min-width: 500px;
+    min-height: 200px;
+    border-radius: 5px;
+
+}
+.contenedor-input input:focus,
+.contenedor-input textarea:focus{
+    outline-color: none;
+}
+.input-error {
+    border-color: red;
+    background-color: rgba(139, 0, 0, 0.562);
+    color: white;
+}
+
+.input-error:focus {
+    outline-color: red
+}
+
+@keyframes comentario {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
