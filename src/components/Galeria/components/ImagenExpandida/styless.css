@@ -1,0 +1,7 @@
+.imagenExp{
+    position: absolute;
+    min-width: 100%;
+    z-index: 4;
+    top: 0;
+    
+}

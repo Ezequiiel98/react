@@ -1,0 +1,10 @@
+img{
+    max-width: 100%;
+}
+.imagen{
+      max-width: 30%;
+      margin: 5px;
+}
+.imagen:hover{
+    cursor: pointer;
+}
