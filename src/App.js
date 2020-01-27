@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 
 function Comentarios(props){
-                
-  /* tengo un objeto que es gastos este adentro tiene otros objetos que son los gastos asi mira
+
+  /* tengo un objeto que es comentarios este adentro tiene otros objetos que son los comentarios asi mira
              comentarios{
                           0: {
                              comentario: {
@@ -14,8 +14,7 @@ function Comentarios(props){
                         }
             entonces con el object.keys(this.props.comentarios) agarro las keys de comentario o sea el 0 ese y con eso puedo mandar como prop cada comentario para poder tener varios comentarios y la prop que mando de key es lo que necesita react para saber que es un componente diferente vendria a ser como un id */
    const comentario = Object.keys(props.comentarios).map(key => (
-        <Comentario 
-           
+        <Comentario
             comentario={props.comentarios[key]}
             key={key}
         /> 
@@ -24,10 +23,7 @@ function Comentarios(props){
    return (
     <div className="comentarios"> 
         <h1 className="titulo-comentarios">Comentarios {props.numComentario}</h1>            
-        
         {comentario}
-          
-   
     </div>
   );
 }
@@ -44,6 +40,16 @@ function Comentarios(props){
     );
   
 } 
+
+function MensajeError(props){
+  
+  const {componenteError, mensajeError} = props.error;
+  return(
+    <div className="mensaje-error">
+      <p>{componenteError} {mensajeError}</p>
+    </div>
+  )
+}
 
 function Formulario(props){
   
@@ -66,24 +72,56 @@ class App extends React.Component{
 
   state = {
     comentarios: {},
-    key: 0
+    key: 0,
+    error: {
+      estado: false,
+      componenteError: '',
+      mensajeError: ''
+    }
   };
 
   handleChange = (event) =>{
 
-    let elemento = event.target;
-    let caracteres = event.target.value.length;
-    let btnEnviar = document.querySelector('#btn-enviar');
+    const elemento = event.target;
+    const caracteres = event.target.value.length;
+    const btnEnviar = document.querySelector('#btn-enviar');
+    const elementoId = event.target.id;
+    let maximoCaracteres;
+    let minimoCaracteres;
+    let componenteError;
 
-    if(caracteres > 3 ){
-      
-      elemento.classList.remove('input-error');
-      btnEnviar.disabled = false;
+    // si el input es el de nombre le pongo esos limites de caracteres y si no le pongo los otros para el comentario
+    if (elementoId === 'input-nombre') {
+      maximoCaracteres = 20;
+      minimoCaracteres = 3;
+      componenteError = 'El nombre';
 
-    }else{
-      
-      elemento.classList.add('input-error');
-      btnEnviar.disabled = true;
+    } else {
+      maximoCaracteres = 150;
+      minimoCaracteres = 10;
+      componenteError = 'El comentario';
+    }
+    
+    if (caracteres > minimoCaracteres && caracteres < maximoCaracteres) {
+
+        elemento.classList.remove('input-error');
+        btnEnviar.disabled = false;
+
+        this.setState({error: {
+          estado: false,
+        }});
+
+    } else {
+
+        elemento.classList.add('input-error');
+        btnEnviar.disabled = true;
+
+        this.setState({error: {
+          estado: true,
+          componenteError: componenteError,
+          mensajeError: 'debe tener entre ' + minimoCaracteres + ' y ' + maximoCaracteres + ' caracteres.'
+        }});
+
     };
   
   };
@@ -96,16 +134,15 @@ class App extends React.Component{
     let caracteresNombre = inputNombre.value.length;
     let caracteresComentario = inputComentario.value.length;      
     
-    if(caracteresNombre > 3 && caracteresComentario > 3){
+    if (caracteresNombre > 3 && caracteresNombre < 20 && caracteresComentario > 10 && caracteresComentario < 150) {
 
       // si esta todo bien activo el boton y borro el color rojo
       inputNombre.classList.remove('input-error');
       inputComentario.classList.remove('input-error');
       btnEnviar.disabled = false;
       
-      // copio el objeto de comentarios del state para despues volver a subirlos con los cambios nuevos, si no lo copio es como que se sobreescribe  y no me guarda todo
+      // copio el objeto de comentarios del state (con el spread opertor ... ) para despues volver a subirlos con los cambios nuevos, si no lo copio es como que se sobreescribe  y no me guarda todo
       const comentarios = {...this.state.comentarios};
-
 
       let comentario = {
         nombre: inputNombre.value,
@@ -127,11 +164,13 @@ class App extends React.Component{
 
     }else{
       
-
       inputNombre.classList.add('input-error');
       inputComentario.classList.add('input-error');
       btnEnviar.disabled = true;
-      
+      this.setState({error: {
+        estado: true,
+        mensajeError: 'Los campos nombre y/o comentario no pueden estar vacios.'
+      }});
     };
 
   };
@@ -141,6 +180,7 @@ class App extends React.Component{
     return(    
          <div className="contenedor">
             <Comentarios comentarios={this.state.comentarios} numComentario={this.state.key}/> 
+           {this.state.error.estado === true && <MensajeError error={this.state.error}  />}
            <Formulario  handleChange={this.handleChange}  handleClick={this.handleClick}/>
           </div>
       )

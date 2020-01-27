@@ -34,7 +34,7 @@ body {
     box-shadow: 0 0 8px #00d9d9;
     animation-duration: 1.5s;
     animation-name: comentario;
-
+    overflow-x: hidden;
 }
 
 .nombre {
@@ -45,6 +45,18 @@ body {
 .comentario {
     margin-left: 50px;
     margin-top: 15px;
+}
+
+.mensaje-error{
+    width: 515px;
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+    color: red;
+    animation-duration: .7s;
+    animation-name: error;
+    font-size: 17px;
+    margin-bottom: -22px;
 }
 
 #btn-enviar {
@@ -80,6 +92,7 @@ body {
 .contenedor-input label {
     margin: 15px 0;
 }
+
 
 .contenedor-input input {
     padding: 10px;
@@ -126,5 +139,15 @@ body {
     100%{
         box-shadow: 0 0 8px #00d9d9;
        
+    }
+}
+@keyframes error{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
