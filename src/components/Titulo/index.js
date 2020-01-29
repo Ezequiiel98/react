@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './styless.css';
+import styles from './styles.css';
 
 function Titulo(props){ 
     return(

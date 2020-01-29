@@ -1,0 +1,17 @@
+img{
+    max-width: 100%;
+}
+.imagen-cuadrilla{
+      max-width: 30%;
+      margin: 5px;
+}
+.imagen-cuadrilla:hover{
+    cursor: pointer;
+}
+
+.imagen-expandida{
+    max-width: 80%;
+    justify-self: center;
+    align-self: center;
+   
+}

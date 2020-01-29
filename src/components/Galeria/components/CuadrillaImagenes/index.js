@@ -3,16 +3,14 @@ import Imagen from './../../../Imagen';
 import styles from './styles.css';
 
 
-
 function CuadrillaImagenes(props){
 
-    let {numeroImagenes, handleClick} = props;
-    console.log(handleClick)
+    let {rutasImagenes, handleClick} = props;
 
     return(
         <div className="cuadrilla-imagenes">
-            {numeroImagenes.map( (numeroImagen)=>
-                <Imagen handleClick={handleClick} key={numeroImagen} numeroImagen={numeroImagen} />
+            {rutasImagenes.map( (rutaImagen)=>
+                <Imagen handleClick={handleClick} key={rutaImagen} className='imagen-cuadrilla' rutaImagen={rutaImagen} />
             )}
         </div>
     )

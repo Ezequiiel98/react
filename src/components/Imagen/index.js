@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './styless.css';
+import styles from './styles.css';
 
 function Imagen(props){  
-    let {handleClick, numeroImagen} = props;
+    let {handleClick, rutaImagen, className} = props;
 
     return( 
-      <img  onClick={handleClick} id={numeroImagen} className='imagen' src={numeroImagen}/>    
+      <img alt="imagen-galeria" onClick={handleClick} className={className} src={rutaImagen}/>    
     )
 }
 
