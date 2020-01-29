@@ -3,8 +3,8 @@
     flex-direction: column;
     position: absolute;
     top: 0;
-    padding: 20px;
-    max-height: 100vh;
+    padding: 22px;
+    max-height: 100%;
     background-color: rgba(0, 0, 0, 0.685);
     animation-duration: .7s;
     animation-name: expandida;
