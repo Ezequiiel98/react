@@ -15,7 +15,8 @@ class Galeria extends React.Component{
     state = {
         imagenExpandida: false,
         imagenSeleccionada: 0,
-        id: ''
+        id: 0
+
     };
 
                         

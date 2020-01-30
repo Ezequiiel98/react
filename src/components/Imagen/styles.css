@@ -5,6 +5,11 @@ img {
 .imagen-cuadrilla {
     max-width: 95%;
     margin: 5px;
+    transition: all .5s ease;
+}
+
+.imagen-cuadrilla:hover {
+    opacity: 1;
 }
 
 .imagen-cuadrilla:hover {
@@ -17,6 +22,7 @@ img {
     align-self: center;
 
 }
+
 
 @media screen and (min-width: 480px) {
     .imagen-cuadrilla {

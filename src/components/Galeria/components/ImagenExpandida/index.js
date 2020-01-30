@@ -8,7 +8,7 @@ import style from './styles.css';
 
 class ImagenExpandida extends React.Component{
     
-    cerrar = (event) => {    
+    cerrar = () => {    
         
         this.props.handleClick(false);
     }
