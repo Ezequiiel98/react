@@ -14,18 +14,15 @@ import ImagenExpandida from './components/ImagenExpandida';
 class Galeria extends React.Component{
     state = {
         imagenExpandida: false,
-        imagenSeleccionada: 0
+        imagenSeleccionada: 0,
+        id: ''
     };
 
-    handleClick = (event) => this.setState({
-                                            imagenExpandida: true,
-                                            imagenSeleccionada: event.target.src
-                                        });
-    
                         
-    handleClickExpandida = (imagenExpandida, imagenSeleccionada) => this.setState({
+    handleClick = (imagenExpandida, imagenSeleccionada, id) => this.setState({
         imagenExpandida: imagenExpandida,
-        imagenSeleccionada: imagenSeleccionada
+        imagenSeleccionada: imagenSeleccionada,
+        id: id
     });         
                              
     render(){
@@ -34,9 +31,9 @@ class Galeria extends React.Component{
             <div>
                 <Titulo titulo='Titulo Galeria' />
 
-                <CuadrillaImagenes handleClick={this.handleClick} rutasImagenes={rutasImagenes} />
+                <CuadrillaImagenes onClick={this.handleClick} rutasImagenes={rutasImagenes} />
 
-                {this.state.imagenExpandida === true && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} imagenExpandida={this.state.imagenExpandida} handleClickExpandida={this.handleClickExpandida} rutasImagenes={rutasImagenes} />}
+                {this.state.imagenExpandida === true && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} imagenExpandida={this.state.imagenExpandida} handleClick={this.handleClick} rutasImagenes={rutasImagenes} id={this.state.id}/>}
             </div>
         );
     };

@@ -5,36 +5,35 @@ import DescripcionImagen from './components/DescripcionImagen';
 import flecha from "./flecha.svg"
 import cruz from "./cruz.svg"
 import style from './styles.css';
-let i = 0;
+
 class ImagenExpandida extends React.Component{
     
     cerrar = (event) => {    
         
-        this.props.handleClickExpandida(false)
+        this.props.handleClick(false);
     }
-
+    
     siguiente = () => {
-  
-        console.log(i)
-        let imagenSeleccionada = this.props.rutasImagenes[i];
-        if (i === this.props.rutasImagenes.length - 1) {
-            this.props.handleClickExpandida(true, imagenSeleccionada)
-            i = 0;
+        let id = parseInt(this.props.id);
+        let imagenSeleccionada = this.props.rutasImagenes[id];
+        if (id === this.props.rutasImagenes.length - 1) {
+            this.props.handleClick(true, imagenSeleccionada, 0);
         } else {
-            this.props.handleClickExpandida(true, imagenSeleccionada)
-            i++
+            id++;
+            this.props.handleClick(true, imagenSeleccionada, id);
         }
     }
 
     anterior = () => {
-        console.log(i)
-        let imagenSeleccionada = this.props.rutasImagenes[i];
-        if (i === 0) {
-            this.props.handleClickExpandida(true, imagenSeleccionada)
-            i =  this.props.rutasImagenes.length - 1;
+
+        let id = parseInt(this.props.id);
+        let imagenSeleccionada = this.props.rutasImagenes[id];
+        if (id === 0) {
+            id =  this.props.rutasImagenes.length - 1;
+            this.props.handleClick(true, imagenSeleccionada, id);
         } else {
-            this.props.handleClickExpandida(true, imagenSeleccionada)
-            i--
+            id--;
+            this.props.handleClick(true, imagenSeleccionada, id);
         }
     }
     

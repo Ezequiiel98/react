@@ -12,7 +12,7 @@ img {
 }
 
 .imagen-expandida {
-    max-width: 80%;
+    max-width: 90%;
     justify-self: center;
     align-self: center;
 
@@ -32,3 +32,4 @@ img {
         margin: 5px;
     }
 }
+
