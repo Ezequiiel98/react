@@ -23,7 +23,11 @@ class Galeria extends React.Component{
                                         });
     
                         
-
+    handleClickExpandida = (imagenExpandida, imagenSeleccionada) => this.setState({
+        imagenExpandida: imagenExpandida,
+        imagenSeleccionada: imagenSeleccionada
+    });         
+                             
     render(){
         let rutasImagenes = [imagen_0,imagen_1,imagen_2,imagen_3,imagen_4,imagen_5]
         return(
@@ -32,7 +36,7 @@ class Galeria extends React.Component{
 
                 <CuadrillaImagenes handleClick={this.handleClick} rutasImagenes={rutasImagenes} />
 
-                {this.state.imagenExpandida === true && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} imagenExpandida={this.state.imagenExpandida}/>}
+                {this.state.imagenExpandida === true && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} imagenExpandida={this.state.imagenExpandida} handleClickExpandida={this.handleClickExpandida} rutasImagenes={rutasImagenes} />}
             </div>
         );
     };
