@@ -22,17 +22,6 @@
     background-color: black;
 }
 
-#btn-descripcion {
-    margin: 0;
-    position: relative;
-    top: 0;
-    bottom: 0;
-    transform: rotate(-90deg);
-}
-
-#btn-descripcion img {
-    margin-top: 5px;
-}
 
 #btn-anterior {
     position: absolute;
@@ -51,10 +40,32 @@
     position: absolute;
     top: 1%;
     right: 1%;
-
-
+    
+    
 }
 
 #btn-cerrar img {
     margin-left: 2px;
 }
+#btn-descripcion {
+    margin: 0;
+    position: relative;
+    bottom: -50px;
+    transform: rotate(-90deg);
+    transition: all .5s ease;
+}
+
+#btn-descripcion img {
+    margin-top: 5px;
+    position: relative;
+    z-index: -1;
+}
+
+.btn-rotar{
+    top:0;
+}
+.btn-rotar > *{
+    transform: rotate(180deg);
+    margin-right: 15.5px;
+}
+

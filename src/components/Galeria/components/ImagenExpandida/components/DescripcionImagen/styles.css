@@ -5,3 +5,21 @@
     left: 15%;
     color: white;
 }
+
+
+.descripcion{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.63);
+    font-size: 18px;
+    animation-name: descripcion;
+    animation-duration: .5s;
+}
+
+@keyframes descripcion{
+ from{
+     opacity: 0;
+ }
+ to{
+     opacity: 1;
+ }
+}

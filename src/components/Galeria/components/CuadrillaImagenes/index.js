@@ -10,8 +10,8 @@ function CuadrillaImagenes(props){
     let handleClick = (event) =>{
         let imagenExpandida = true;
          let imagenSeleccionada = event.target.src;
-         let id = event.target.id;
-         console.log(imagenSeleccionada,imagenExpandida, id)
+         let id = parseInt(event.target.id);
+
          onClick(imagenExpandida, imagenSeleccionada,id);
     };
 
