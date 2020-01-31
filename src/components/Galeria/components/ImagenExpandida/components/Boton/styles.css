@@ -9,6 +9,7 @@
     background-color: rgba(0, 0, 0, 0.452);
     transition: all .5s ease;
     border: 3px solid white;
+    outline:none;
 }
 
 
@@ -21,7 +22,6 @@
     cursor: pointer;
     background-color: black;
 }
-
 
 #btn-anterior {
     position: absolute;
