@@ -1,25 +1,12 @@
-.contenedor-descripcion {
+.descripcion-imagen {
     position: absolute;
     max-width: 70%;
     top: 60%;
     left: 15%;
     color: white;
+    min-width: 70%;
 }
 
 
-.descripcion{
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.63);
-    font-size: 18px;
-    animation-name: descripcion;
-    animation-duration: .5s;
-}
 
-@keyframes descripcion{
- from{
-     opacity: 0;
- }
- to{
-     opacity: 1;
- }
-}
+

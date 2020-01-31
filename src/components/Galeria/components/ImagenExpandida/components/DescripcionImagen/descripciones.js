@@ -1,10 +1,10 @@
 const descripciones = [{
-    titulo: 'titulo 1',
-    descripcion: 'Descripcion 1'
+    titulo: 'Titulo 1',
+    descripcion: 'Descripcion 1 esta immagen se trata de tal cosa muy interezante'
 },
 {
     titulo: 'titulo 2',
-    descripcion: 'Descripcion 2'
+    descripcion: 'Descripcion 2 esta otra imagen tambien esta muy buena :D '
 },
 
 {

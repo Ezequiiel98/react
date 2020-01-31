@@ -1,13 +1,15 @@
-import React from 'react'
-import Titulo from '../../../../../../../Titulo'
+import React from 'react';
+import Titulo from '../../../../../../../Titulo';
+import './styles.css';
 
 function Descripcion(props){
+    let {titulo,descripcion} = props.descripciones;
     return(
-       <div>
-            <Titulo titulo={props.titulo}/>
-            <p>{props.descripcion}</p>
+       <div className="contenedor-descripcion">
+            <Titulo titulo={titulo}/>
+            <p className="descripcion">{descripcion}</p>
        </div>
     )
 }
 
-export default Descripcion
+export default Descripcion;

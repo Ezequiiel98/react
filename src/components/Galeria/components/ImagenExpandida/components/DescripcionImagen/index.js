@@ -9,7 +9,9 @@ class DescripcionImagen extends React.Component {
         state = {
             descripcionImagen: false
         };
+
         descripciones = descripciones;
+
         handleClick = (event) => {
 
             this.setState({
@@ -29,10 +31,10 @@ class DescripcionImagen extends React.Component {
    
 
         return(
-            <div className="contenedor-descripcion">
+            <div className="descripcion-imagen">
                 <Boton  handleClick={this.handleClick} id="btn-descripcion" icono={flecha} />
 
-                 {this.state.descripcionImagen === true && <Descripcion titulo={ this.descripciones[id].titulo} descripcion={ this.descripciones[id].descripcion} />}
+                 {this.state.descripcionImagen === true && <Descripcion descripciones={this.descripciones[id]} />}
 
             </div>
         )

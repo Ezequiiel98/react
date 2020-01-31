@@ -1,0 +1,34 @@
+.contenedor-descripcion{
+    margin-top: 12px;
+    padding: 5px 20px;
+    background-color: rgba(0, 0, 0, 0.63);
+    font-size: 18px;
+    animation-name: descripcion;
+    animation-duration: .5s;
+    min-width: 100%;
+}
+
+.contenedor-descripcion > *{
+    text-align: left;
+}
+
+.titulo{
+    margin: 5px;
+    padding: 0;
+}
+
+.descripcion{
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+@keyframes descripcion{
+ from{
+     opacity: 0;
+     transform: translateY(10px);
+ }
+ to{
+     opacity: 1;
+     transform: translateY(0);
+ }
+}
