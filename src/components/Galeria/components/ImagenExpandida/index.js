@@ -10,7 +10,7 @@ class ImagenExpandida extends React.Component{
     
     cerrar = () => {    
         
-        this.props.handleClick(false);
+        this.props.changeState(false);
     }
     
     siguiente = () => {
@@ -21,10 +21,10 @@ class ImagenExpandida extends React.Component{
             
             imagenSeleccionada = this.props.rutasImagenes[0];
 
-            this.props.handleClick(true, imagenSeleccionada, id);
+            this.props.changeState(true, imagenSeleccionada, id);
         } else {
             id++;
-            this.props.handleClick(true, imagenSeleccionada, id);
+            this.props.changeState(true, imagenSeleccionada, id);
         }
     }
 
@@ -36,10 +36,10 @@ class ImagenExpandida extends React.Component{
         if (id === 0) {
             id =  this.props.rutasImagenes.length - 1;  
             imagenSeleccionada = this.props.rutasImagenes[id];
-            this.props.handleClick(true, imagenSeleccionada, id);
+            this.props.changeState(true, imagenSeleccionada, id);
         } else {
             id--;
-            this.props.handleClick(true, imagenSeleccionada, id);
+            this.props.changeState(true, imagenSeleccionada, id);
         }
     }
     

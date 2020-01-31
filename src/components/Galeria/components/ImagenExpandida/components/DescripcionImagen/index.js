@@ -7,6 +7,7 @@ class DescripcionImagen extends React.Component {
         state = {
             descripcionImagen: false
         };
+        
         handleClick = (event) => {
 
             this.setState({
@@ -19,8 +20,8 @@ class DescripcionImagen extends React.Component {
             } else {
                 event.target.classList.remove('btn-rotar');
             }
-
         }
+
    render(){
         return(
             <div className="contenedor-descripcion">
