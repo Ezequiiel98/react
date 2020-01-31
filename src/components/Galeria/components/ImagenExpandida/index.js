@@ -50,7 +50,7 @@ class ImagenExpandida extends React.Component{
                  <Boton icono={flecha} handleClick={this.anterior}   id="btn-anterior" />
                  <Boton icono={flecha} handleClick={this.siguiente}  id="btn-siguiente" />
                  <Boton icono={cruz}   handleClick={this.cerrar} id="btn-cerrar"/>
-                <DescripcionImagen />
+                <DescripcionImagen id={this.props.id} />
             </div>
         )
     }
