@@ -1,26 +1,26 @@
 const descripciones = [{
-    titulo: 'Titulo 1',
+    titulo: 'Imagen 1',
     descripcion: 'Descripcion 1 esta immagen se trata de tal cosa muy interezante'
 },
 {
-    titulo: 'titulo 2',
+    titulo: 'Imagen 2',
     descripcion: 'Descripcion 2 esta otra imagen tambien esta muy buena :D '
 },
 
 {
-    titulo: 'titulo 3',
+    titulo: 'Imagen 3',
     descripcion: 'Descripcion 3'
 },
 {
-    titulo: 'titulo 4',
+    titulo: 'Imagen 4',
     descripcion: 'Descripcion 4'
 },
 {
-    titulo: 'titulo 5',
+    titulo: 'Imagen 5',
     descripcion: 'Descripcion 5'
 },
 {
-    titulo: 'titulo 6',
+    titulo: 'Imagen 6',
     descripcion: 'Descripcion 6'
 }
 ];

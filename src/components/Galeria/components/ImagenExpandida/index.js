@@ -2,6 +2,7 @@ import React from 'react';
 import Imagen from './../../../Imagen';
 import Boton from './components/Boton';
 import DescripcionImagen from './components/DescripcionImagen';
+import IndicadorImagen from './components/IndicadorImagen';
 import flecha from "./flecha.svg"
 import cruz from "./cruz.svg"
 import style from './styles.css';
@@ -13,9 +14,12 @@ class ImagenExpandida extends React.Component{
         this.props.changeState(false);
     }
     
+
     siguiente = () => {
         let id = parseInt(this.props.id);
         let imagenSeleccionada = this.props.rutasImagenes[id + 1];
+       
+
         if (id === this.props.rutasImagenes.length - 1) {
             id = 0 ;
             
@@ -27,6 +31,9 @@ class ImagenExpandida extends React.Component{
             this.props.changeState(true, imagenSeleccionada, id);
         }
     }
+
+   
+
 
     anterior = () => {
 
@@ -41,6 +48,7 @@ class ImagenExpandida extends React.Component{
             id--;
             this.props.changeState(true, imagenSeleccionada, id);
         }
+        
     }
     
     render(){
@@ -51,6 +59,7 @@ class ImagenExpandida extends React.Component{
                  <Boton icono={flecha} handleClick={this.siguiente}  id="btn-siguiente" />
                  <Boton icono={cruz}   handleClick={this.cerrar} id="btn-cerrar"/>
                 <DescripcionImagen id={this.props.id} />
+                <IndicadorImagen id={this.props.id} rutasImagenes={this.props.rutasImagenes} />
             </div>
         )
     }

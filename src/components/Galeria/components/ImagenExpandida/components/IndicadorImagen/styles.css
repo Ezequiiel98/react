@@ -1,0 +1,15 @@
+.contenedor-indicadores{
+    position: absolute;
+    z-index: 2;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-60%);
+    background-color: black;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+
