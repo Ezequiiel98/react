@@ -1,6 +1,6 @@
 import React from 'react';
-import Imagen from './../../../Imagen';
-import styles from './styles.css';
+import Imagen from '../Imagen';
+import   './styles.css';
 
 
 function CuadrillaImagenes(props){

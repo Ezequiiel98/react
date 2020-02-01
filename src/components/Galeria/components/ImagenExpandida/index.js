@@ -1,11 +1,11 @@
 import React from 'react';
-import Imagen from './../../../Imagen';
+import Imagen from '../Imagen';
 import Boton from './components/Boton';
 import DescripcionImagen from './components/DescripcionImagen';
 import IndicadorImagen from './components/IndicadorImagen';
-import flecha from "./flecha.svg"
-import cruz from "./cruz.svg"
-import style from './styles.css';
+import flecha from "../../../../assets/iconos/flecha.svg"
+import cruz from "../../../../assets/iconos/cruz.svg"
+import './styles.css';
 
 class ImagenExpandida extends React.Component{
     
@@ -58,7 +58,7 @@ class ImagenExpandida extends React.Component{
                  <Boton icono={flecha} handleClick={this.anterior}   id="btn-anterior" />
                  <Boton icono={flecha} handleClick={this.siguiente}  id="btn-siguiente" />
                  <Boton icono={cruz}   handleClick={this.cerrar} id="btn-cerrar"/>
-                <DescripcionImagen id={this.props.id} />
+                <DescripcionImagen icono={flecha} id={this.props.id} />
                 <IndicadorImagen id={this.props.id} rutasImagenes={this.props.rutasImagenes} />
             </div>
         )

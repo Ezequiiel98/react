@@ -17,10 +17,10 @@ img {
 }
 
 .imagen-expandida {
-    max-width: 90%;
+    max-width: 80vw;
     justify-self: center;
     align-self: center;
-
+    margin-top: 15px;
 }
 
 

@@ -1,9 +1,8 @@
 import React from 'react';
 import Boton from '../Boton';
 import Descripcion from './components/Descripcion';
-import descripciones from './descripciones'
-import flecha from '../../../ImagenExpandida/flecha.svg'
-import styles from './styles.css'
+import descripciones from '../../../../../../constants/descripciones'
+import   './styles.css'
 
 class DescripcionImagen extends React.Component {
         state = {
@@ -32,7 +31,7 @@ class DescripcionImagen extends React.Component {
 
         return(
             <div className="descripcion-imagen">
-                <Boton  handleClick={this.handleClick} id="btn-descripcion" icono={flecha} />
+                <Boton  handleClick={this.handleClick} id="btn-descripcion" icono={this.props.icono} />
 
                  {this.state.descripcionImagen === true && <Descripcion descripciones={this.descripciones[id]} />}
 
