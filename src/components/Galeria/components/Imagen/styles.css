@@ -5,11 +5,9 @@
 }
 
 .imagen-cuadrilla:hover {
-	opacity: 1;
-}
-
-.imagen-cuadrilla:hover {
 	cursor: pointer;
+	filter: drop-shadow(8px 8px 10px black);
+	transform: scale(1.02);
 }
 
 .imagen-expandida {

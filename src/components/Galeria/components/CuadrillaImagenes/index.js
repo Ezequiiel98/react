@@ -3,9 +3,7 @@ import Imagen from '../Imagen';
 import   './styles.css';
 
 
-function CuadrillaImagenes(props){
-
-    let {rutasImagenes, changeState} = props;
+function CuadrillaImagenes({rutasImagenes, changeState}){
     
     let handleClick = (event) =>{
         let imagenExpandida = true;
