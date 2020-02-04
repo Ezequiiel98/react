@@ -1,4 +1,4 @@
-.contenedor-indicadores{
+.contenedor-indicadores {
     position: absolute;
     z-index: 2;
     bottom: 30px;
@@ -11,5 +11,3 @@
     justify-content: space-between;
     border-radius: 10px;
 }
-
-

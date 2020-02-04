@@ -1,24 +1,23 @@
-.contenedor-expandida{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    min-height: 100vh;
-    min-width: 100%;
-    background-color: rgba(0, 0, 0, 0.685);
-    animation-duration: .7s;
-    animation-name: expandida;
+.contenedor-expandida {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	min-height: 100vh;
+	min-width: 100%;
+	background-color: rgba(0, 0, 0, 0.685);
+	animation-duration: .7s;
+	animation-name: expandida;
 }
 
+@keyframes expandida {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
 
-
-@keyframes expandida{
-    from{
-        opacity: 0;
-        transform: scale(0);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }

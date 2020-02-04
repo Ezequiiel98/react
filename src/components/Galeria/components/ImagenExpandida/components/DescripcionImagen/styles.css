@@ -1,12 +1,8 @@
 .descripcion-imagen {
-    position: absolute;
-    max-width: 70%;
-    top: 60%;
-    left: 15%;
-    color: white;
-    min-width: 70%;
+	position: absolute;
+	max-width: 70%;
+	top: 60%;
+	left: 15%;
+	color: white;
+	min-width: 70%;
 }
-
-
-
-

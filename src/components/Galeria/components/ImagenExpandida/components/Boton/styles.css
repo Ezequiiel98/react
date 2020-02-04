@@ -1,84 +1,80 @@
 .btn {
-    position: absolute;
-    border-radius: 50%;
-    padding: 0;
-    margin: 0;
-
-    width: 65px;
-    height: 65px;
-    background-color: rgba(0, 0, 0, 0.452);
-    transition: all .5s ease;
-    border: 3px solid white;
-    outline:none;
+  position: absolute;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(0, 0, 0, 0.452);
+  transition: all .5s ease;
+  border: 3px solid white;
+  outline: none;
 }
 
-
 .btn img {
-    margin-left: 8px;
-    margin-top: 2px;
+  margin-left: 8px;
+  margin-top: 2px;
 }
 
 .btn:hover {
-    cursor: pointer;
-    background-color: black;
+  cursor: pointer;
+  background-color: black;
 }
 
 #btn-anterior {
-    position: absolute;
-    top: 45%;
-    left: 1%;
-    transform: rotate(180deg);
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  transform: rotate(180deg);
 }
 
 #btn-siguiente {
-    position: absolute;
-    top: 45%;
-    right: 1%;
+  position: absolute;
+  top: 45%;
+  right: 1%;
 }
 
 #btn-cerrar {
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    
-    
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }
 
 #btn-cerrar img {
-    margin-left: 2px;
+  margin-left: 2px;
 }
+
 #btn-descripcion {
-    margin: 0;
-    position: relative;
-    bottom: -50px;
-    transform: rotate(-90deg);
-    transition: all .5s ease;
+  margin: 0;
+  position: relative;
+  bottom: -50px;
+  transform: rotate(-90deg);
+  transition: all .5s ease;
 }
 
 #btn-descripcion img {
-    margin-top: 5px;
-    position: relative;
-    z-index: -1;
+  margin-top: 5px;
+  position: relative;
+  z-index: -1;
 }
 
-.btn-rotar{
-    top:0;
-    animation-name: btn-rotar;
-    animation-duration: .5s;
+.btn-rotar {
+  top: 0;
+  animation-name: btn-rotar;
+  animation-duration: .5s;
 }
 
-.btn-rotar > *{
-    transform: rotate(180deg);
-    margin-right: 15.5px;
+.btn-rotar>* {
+  transform: rotate(180deg);
+  margin-right: 15.5px;
 }
 
-@keyframes btn-rotar{
-   
-    from{
-        transform: rotate(90deg);
-    }
-    
-    to{
-        transform: rotate(270deg);
-    }
+@keyframes btn-rotar {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(270deg);
+  }
 }
