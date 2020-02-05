@@ -32,9 +32,7 @@ class DescripcionImagen extends React.Component {
         return(
             <div className="descripcion-imagen">
                 <Boton  handleClick={this.handleClick} id="btn-descripcion" icono={this.props.icono} />
-
                  {this.state.descripcionImagen === true && <Descripcion descripciones={this.descripciones[id]} />}
-
             </div>
         )
    }

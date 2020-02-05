@@ -30,15 +30,14 @@ class Galeria extends React.Component{
                 <CuadrillaImagenes changeState={this.changeState} rutasImagenes={rutasImagenes} />
 
                  
-                 {
-                     this.state.imagenExpandida === true && 
+                 {this.state.imagenExpandida === true && 
                         <ImagenExpandida 
                                          imagenSeleccionada={this.state.imagenSeleccionada}
                                          changeState={this.changeState} 
                                          rutasImagenes={rutasImagenes} 
                                          id={this.state.id}
-                                         />
-                                            }
+                                         /> 
+                                         }
             </div>
         );
     };

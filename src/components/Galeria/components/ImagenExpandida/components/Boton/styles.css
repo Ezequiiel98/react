@@ -47,7 +47,7 @@
 #btn-descripcion {
   margin: 0;
   position: relative;
-  bottom: -50px;
+ 	bottom: 50px;
   transform: rotate(-90deg);
   transition: all .5s ease;
 }

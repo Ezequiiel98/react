@@ -1,26 +1,21 @@
 import React from 'react';
 import Imagen from '../Imagen';
-import   './styles.css';
+import './styles.css';
 
 
-function CuadrillaImagenes({rutasImagenes, changeState}){
-    
-    let handleClick = (event) =>{
-        let imagenExpandida = true;
-         let imagenSeleccionada = event.target.src;
-         let id = parseInt(event.target.id);
+function CuadrillaImagenes({ rutasImagenes, changeState }) {
+  const handleClick = (event, index) => {
+    const imagenExpandida = true;
+    const imagenSeleccionada = event.target.src;
+    const id = index;
+    changeState(imagenExpandida, imagenSeleccionada, id);
+  };
 
-         changeState(imagenExpandida, imagenSeleccionada,id);
-    };
-
-    return(
-        <div className="cuadrilla-imagenes">
-            {rutasImagenes.map( (rutaImagen, index)=>
-                <Imagen handleClick={handleClick} key={index} id={index} className='imagen-cuadrilla' rutaImagen={rutaImagen} />
-            )}
-        </div>
-    )
+  return (
+    <div className="cuadrilla-imagenes">
+      {rutasImagenes.map((rutaImagen, index) => <Imagen handleClick={(event) => handleClick(event, index)} key={rutaImagen} className="imagen-cuadrilla" rutaImagen={rutaImagen} />)}
+    </div>
+  );
 }
-
 
 export default CuadrillaImagenes;

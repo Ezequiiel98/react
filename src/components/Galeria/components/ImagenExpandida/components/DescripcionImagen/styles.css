@@ -1,7 +1,7 @@
 .descripcion-imagen {
 	position: absolute;
 	max-width: 70%;
-	top: 60%;
+	bottom: 100px;
 	left: 15%;
 	color: white;
 	min-width: 70%;

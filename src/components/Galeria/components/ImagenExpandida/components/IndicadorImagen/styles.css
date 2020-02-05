@@ -1,7 +1,7 @@
 .contenedor-indicadores {
 	position: absolute;
 	z-index: 2;
-	bottom: 30px;
+	bottom: 35px;
 	left: 50%;
 	transform: translate(-60%);
 	background-color: black;

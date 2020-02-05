@@ -50,7 +50,10 @@ class ImagenExpandida extends React.Component{
         */
         let imagenSeleccionada = this.props.rutasImagenes[(id + largoImagenes - 1) % largoImagenes];
         this.props.changeState(true, imagenSeleccionada, (id  + largoImagenes - 1) % largoImagenes );                    
-    }    
+    }  
+    
+   /*  handleKeyDown = ({keyCode}) => (keyCode === 39) ? this.siguiente() : false; */
+
     render(){
         return(
             <div className="contenedor-expandida">

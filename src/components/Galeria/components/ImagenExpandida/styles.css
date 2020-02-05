@@ -1,10 +1,12 @@
 .contenedor-expandida {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content:center ;
 	position: absolute;
 	top: 0;
 	min-height: 100vh;
-	min-width: 100%;
+	min-width: 100vw;
 	background-color: rgba(0, 0, 0, 0.685);
 	animation-duration: .7s;
 	animation-name: expandida;
