@@ -5,7 +5,7 @@ import Indicador from './components/Indicador';
 function IndicadorImagen({ rutasImagenes, id }) {
   return (
     <div className="contenedor-indicadores">
-      {rutasImagenes.map((e, index) => <Indicador key={id} className={index === id ? 'indicador-grande' : 'indicador-chico'} />)}
+      {rutasImagenes.map((e, index) => <Indicador key={index} className={index === id ? 'indicador-grande' : 'indicador-chico'} />)}
     </div>
   );
 }
