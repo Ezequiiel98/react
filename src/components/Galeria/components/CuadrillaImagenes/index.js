@@ -2,7 +2,6 @@ import React from 'react';
 import Imagen from '../Imagen';
 import './styles.css';
 
-
 function CuadrillaImagenes({ rutasImagenes, changeState }) {
   const handleClick = (event, index) => {
     const imagenExpandida = true;
@@ -13,7 +12,7 @@ function CuadrillaImagenes({ rutasImagenes, changeState }) {
 
   return (
     <div className="cuadrilla-imagenes">
-      {rutasImagenes.map((rutaImagen, index) => <Imagen handleClick={(event) => handleClick(event, index)} key={rutaImagen} className="imagen-cuadrilla" rutaImagen={rutaImagen} />)}
+      {rutasImagenes.map((rutaImagen, index) => <Imagen onClick={(event) => handleClick(event, index)} key={rutaImagen} className="imagen-cuadrilla" rutaImagen={rutaImagen} />)}
     </div>
   );
 }

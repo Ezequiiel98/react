@@ -2,10 +2,10 @@ import React from 'react';
 import './styles.css';
 
 function Imagen({
-  handleClick, rutaImagen, className,
+  onClick, rutaImagen, className,
 }) {
   return (
-    <img alt="imagen-galeria" onClick={handleClick} className={className} src={rutaImagen} />
+    <img alt="imagen-galeria" onClick={onClick} className={className} src={rutaImagen} />
   );
 }
 

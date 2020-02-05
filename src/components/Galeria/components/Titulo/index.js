@@ -1,11 +1,10 @@
 import React from 'react';
 import './styles.css';
 
-function Titulo(props) {
+function Titulo({ titulo }) {
   return (
-    <h1 className="titulo">{props.titulo}</h1>
+    <h1 className="titulo">{ titulo }</h1>
   );
 }
-
 
 export default Titulo;
