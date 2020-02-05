@@ -16,41 +16,41 @@ class ImagenExpandida extends React.Component{
     
 
     siguiente = () => {
-        let id = parseInt(this.props.id);
-        let imagenSeleccionada = this.props.rutasImagenes[id + 1];
-       
+        let id = this.props.id;
+        let largoImagenes = this.props.rutasImagenes.length;
+         /* 
+            id empieza  en 0  y   largoImagenes = 5. Entonces:
+                
+                 id +  1        % largoImagenes
+                  0 + 1 = 1   1 % 5 = 1 
+                  1 + 1 = 2   2 % 5 = 2 
+                  2 + 1 = 3   3 % 5 = 3
+                  3 + 1 = 4   4 % 5 = 4  
+                  4 + 1 = 5   5 % 5 = 0 (y aca logras que de la vuelta a todos los elementos del array) 
 
-        if (id === this.props.rutasImagenes.length - 1) {
-            id = 0 ;
-            
-            imagenSeleccionada = this.props.rutasImagenes[0];
-
-            this.props.changeState(true, imagenSeleccionada, id);
-        } else {
-            id++;
-            this.props.changeState(true, imagenSeleccionada, id);
-        }
+              
+        */
+        let imagenSeleccionada = this.props.rutasImagenes[(id + 1) % largoImagenes];
+        this.props.changeState(true, imagenSeleccionada, (id + 1) % largoImagenes);
     }
-
-   
-
 
     anterior = () => {
-
-        let id = parseInt(this.props.id);
-        let imagenSeleccionada = this.props.rutasImagenes[id - 1];
-
-        if (id === 0) {
-            id =  this.props.rutasImagenes.length - 1;  
-            imagenSeleccionada = this.props.rutasImagenes[id];
-            this.props.changeState(true, imagenSeleccionada, id);
-        } else {
-            id--;
-            this.props.changeState(true, imagenSeleccionada, id);
-        }
-        
-    }
-    
+        let id = this.props.id;
+        let largoImagenes = this.props.rutasImagenes.length;
+        /* 
+            id empieza  en 4 (el ultimo id) y   largoImagenes = 5. Entonces:
+                
+                 id + largoImagen - 1         % largoImagenes
+                  4 + 4 = 8                8 % 5  =  3 (5 divido 8 te queda 3 de resto) 
+                  3 + 4 =  7               7 % 5 = 2 
+                  2 + 4 = 6                6 % 5 = 1
+                  1 + 4 = 5                5 % 5 = 0 
+                  0 + 4 = 4                4 % 5 = 4
+              
+        */
+        let imagenSeleccionada = this.props.rutasImagenes[(id + largoImagenes - 1) % largoImagenes];
+        this.props.changeState(true, imagenSeleccionada, (id  + largoImagenes - 1) % largoImagenes );                    
+    }    
     render(){
         return(
             <div className="contenedor-expandida">
