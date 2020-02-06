@@ -12,7 +12,14 @@ function CuadrillaImagenes({ rutasImagenes, changeState }) {
 
   return (
     <div className="cuadrilla-imagenes">
-      {rutasImagenes.map((rutaImagen, index) => <Imagen onClick={(event) => handleClick(event, index)} key={rutaImagen} className="imagen-cuadrilla" rutaImagen={rutaImagen} />)}
+      {rutasImagenes.map((rutaImagen, index) => (
+        <Imagen
+          onClick={event => handleClick(event, index)}
+          key={rutaImagen}
+          className="imagen-cuadrilla"
+          rutaImagen={rutaImagen}
+        />
+      ))}
     </div>
   );
 }
