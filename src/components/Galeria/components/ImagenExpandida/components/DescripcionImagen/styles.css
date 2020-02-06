@@ -6,3 +6,38 @@
 	color: white;
 	min-width: 70%;
 }
+
+.btn-descripcion {
+	margin: 0;
+	position: relative;
+	bottom: 50px;
+	transform: rotate(-90deg);
+	transition: all .5s ease;
+}
+
+.btn-descripcion img {
+	margin-top: 5px;
+	position: relative;
+	z-index: -1;
+}
+
+.btn-rotar {
+	top: 0;
+	animation-name: btn-rotar;
+	animation-duration: .5s;
+}
+
+.btn-rotar>* {
+	transform: rotate(180deg);
+	margin-right: 15.5px;
+}
+
+@keyframes btn-rotar {
+	from {
+		transform: rotate(90deg);
+	}
+
+	to {
+		transform: rotate(270deg);
+	}
+}

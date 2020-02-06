@@ -2,17 +2,17 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content:center ;
+	justify-content: center;
 	position: absolute;
 	top: 0;
 	min-height: 100vh;
 	min-width: 100vw;
 	background-color: rgba(0, 0, 0, 0.685);
 	animation-duration: .7s;
-	animation-name: expandida;
+	animation-name: expansion;
 }
 
-@keyframes expandida {
+@keyframes expansion {
 	from {
 		opacity: 0;
 		transform: scale(0);
@@ -22,4 +22,27 @@
 		opacity: 1;
 		transform: scale(1);
 	}
+}
+
+.btn-anterior {
+  position: absolute;
+  top: 45%;
+  left: 1%;
+  transform: rotate(180deg);
+}
+
+.btn-siguiente {
+  position: absolute;
+  top: 45%;
+  right: 1%;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+}
+
+.btn-cerrar img {
+  margin-left: 2px;
 }

@@ -8,21 +8,19 @@ class Galeria extends React.Component {
   state = {
       imagenExpandida: false,
       imagenSeleccionada: 0,
-      id: 0
+      indexSeleccionado: 0
   };
-                      
-  changeState = (imagenExpandida, imagenSeleccionada, id) => this.setState({
-      imagenExpandida: imagenExpandida,
-      imagenSeleccionada: imagenSeleccionada,
-      id: id
-  });         
-                           
+  
+  onClose = () => this.setState({imagenExpandida: false});
+
+  changeState = (imagenExpandida, imagenSeleccionada, indexSeleccionado) => this.setState({ imagenExpandida, imagenSeleccionada, indexSeleccionado });         
+    
   render() {
     return (
       <>
         <Titulo titulo='Titulo Galeria' />
         <CuadrillaImagenes changeState={this.changeState} rutasImagenes={rutasImagenes} />           
-        { this.state.imagenExpandida && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} changeState={this.changeState} rutasImagenes={rutasImagenes} id={this.state.id} /> }
+        { this.state.imagenExpandida && <ImagenExpandida imagenSeleccionada={this.state.imagenSeleccionada} changeState={this.changeState} onClose={this.onClose} rutasImagenes={rutasImagenes} indexSeleccionado={this.state.indexSeleccionado} /> }
       </>
     );
   };
