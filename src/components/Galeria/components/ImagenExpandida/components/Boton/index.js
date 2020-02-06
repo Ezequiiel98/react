@@ -2,10 +2,10 @@ import React from 'react';
 import './styles.css';
 
 function Boton({
-  handleClick, className, icono,
+  onClick, className, icono,
 }) {
   return (
-    <button type="button" onClick={handleClick} className={`btn ${className}`}>
+    <button type="button" onClick={onClick} className={`btn ${className}`}>
       <img src={icono} alt="icono" />
     </button>
   );

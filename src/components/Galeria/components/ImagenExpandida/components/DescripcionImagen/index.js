@@ -11,16 +11,16 @@ class DescripcionImagen extends React.Component {
 
   descripciones = descripciones;
 
-  handleClick = event => this.setState(
+  handleClick = ({ target }) => this.setState(
     { descripcionImagen: !this.state.descripcionImagen },
-    () => this.state.descripcionImagen ? event.target.classList.remove('btn-rotar') : event.target.classList.add('btn-rotar')
+    () => this.state.descripcionImagen ? target.classList.add('btn-rotar') : target.classList.remove('btn-rotar')
   );
-  
+
   render() {
     const indexSeleccionado = this.props.indexSeleccionado;
     return (
       <div className="descripcion-imagen">
-        <Boton  handleClick={this.handleClick} className="btn-descripcion" icono={this.props.icono} />
+        <Boton  onClick={this.handleClick} className="btn-descripcion" icono={this.props.icono} />
         {this.state.descripcionImagen && <Descripcion descripciones={this.descripciones[indexSeleccionado]} />}
       </div>
     );
