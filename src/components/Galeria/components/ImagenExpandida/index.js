@@ -47,15 +47,18 @@ class ImagenExpandida extends React.Component{
     let imagenSeleccionada = this.props.rutasImagenes[(indexSeleccionado + largoImagenes - 1) % largoImagenes];
     this.props.changeState(true, imagenSeleccionada, (indexSeleccionado  + largoImagenes - 1) % largoImagenes );                    
   };  
+   
+  descripcion = () => this.props.descripciones[this.props.indexSeleccionado];
 
   render() {
+
     return (
       <div className="contenedor-expandida">
         <Imagen className='imagen-expandida' rutaImagen={this.props.imagenSeleccionada} />
         <Boton icono={flecha} onClick={this.anterior}   className="btn-anterior" />
         <Boton icono={flecha} onClick={this.siguiente}  className="btn-siguiente" />
         <Boton icono={cruz}   onClick={this.cerrar} className="btn-cerrar"/>
-        <DescripcionImagen icono={flecha} indexSeleccionado={this.props.indexSeleccionado} />
+        <DescripcionImagen  descripcion={this.descripcion()} icono={flecha} />
         <IndicadorImagen indexSeleccionado={this.props.indexSeleccionado} rutasImagenes={this.props.rutasImagenes} />
       </div>
     );

@@ -1,27 +1,24 @@
 import React from 'react';
 import Boton from '../Boton';
 import Descripcion from './components/Descripcion';
-import descripciones from '../../../../../../constants/descripciones'
 import './styles.css'
 
 class DescripcionImagen extends React.Component {
   state = {
-      descripcionImagen: false
+    descripcionVisible: false
   };
 
-  descripciones = descripciones;
-
   handleClick = ({ target }) => this.setState(
-    { descripcionImagen: !this.state.descripcionImagen },
-    () => this.state.descripcionImagen ? target.classList.add('btn-rotar') : target.classList.remove('btn-rotar')
+    { descripcionVisible: !this.state.descripcionVisible },
+    () => this.state.descripcionVisible ? target.classList.add('btn-rotar') : target.classList.remove('btn-rotar')
   );
 
   render() {
-    const indexSeleccionado = this.props.indexSeleccionado;
+    const {icono, descripcion} = this.props;
     return (
       <div className="descripcion-imagen">
-        <Boton  onClick={this.handleClick} className="btn-descripcion" icono={this.props.icono} />
-        {this.state.descripcionImagen && <Descripcion descripciones={this.descripciones[indexSeleccionado]} />}
+        <Boton  onClick={this.handleClick} className="btn-descripcion" icono={icono} />
+        {this.state.descripcionVisible && <Descripcion descripciones={descripcion} />}
       </div>
     );
   };

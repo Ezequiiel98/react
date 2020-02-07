@@ -11,3 +11,18 @@
 	justify-content: space-between;
 	border-radius: 10px;
 }
+
+.chico {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: white;
+	margin: 0 5px;
+}
+
+.grande {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: white;
+}
