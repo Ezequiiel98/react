@@ -18,7 +18,7 @@ class DescripcionImagen extends React.Component {
     return (
       <div className="descripcion-imagen">
         <Boton  onClick={this.handleClick} className="btn-descripcion" icono={icono} />
-        {this.state.descripcionVisible && <Descripcion descripciones={descripcion} />}
+        {this.state.descripcionVisible && <Descripcion descripcion={descripcion} />}
       </div>
     );
   };
