@@ -1,0 +1,40 @@
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center ;
+    padding: 20px;
+    max-width: 200px;
+}
+
+
+.contenedorInput{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+}
+
+.input{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #000;
+    margin-top: 6px;
+}
+.btnSubmit{
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #fff;
+    align-self: flex-end;   
+    font-weight: bold;
+    transition: background-color .3s ease, color .3s ease;
+    width: 100px;
+    height: 50px;
+    font-size: 17px;
+    &:hover{
+      background-color: black;
+      color: #fff;
+    }
+}
