@@ -151,3 +151,7 @@ body {
         transform: translateY(0px);
     }
 }
+
+.disabled{
+    opacity: 0.3;
+}
