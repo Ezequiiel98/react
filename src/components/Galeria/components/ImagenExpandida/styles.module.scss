@@ -1,4 +1,4 @@
-.contenedor-expandida {
+.contenedorExpandida {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,25 +24,25 @@
 	}
 }
 
-.btn-anterior {
+.btnAnterior {
   position: absolute;
   top: 45%;
   left: 1%;
   transform: rotate(180deg);
 }
 
-.btn-siguiente {
+.btnSiguiente {
   position: absolute;
   top: 45%;
   right: 1%;
 }
 
-.btn-cerrar {
+.btnCerrar {
   position: absolute;
   top: 1%;
-  right: 1%;
-}
+	right: 1%;
 
-.btn-cerrar img {
-  margin-left: 2px;
+	[class*="icono"] {
+		margin-left: 2px;
+	}
 }

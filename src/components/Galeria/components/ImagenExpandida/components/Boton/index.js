@@ -1,10 +1,11 @@
 import React from 'react';
-import './styles.css';
+
+import styles from './styles.module.scss';
 
 function Boton({ onClick, className, icono }) {
   return (
-    <button type="button" onClick={onClick} className={`btn ${className}`}>
-      <img src={icono} alt="icono" />
+    <button type="button" onClick={onClick} className={`${styles.btn} ${className}`}>
+      <img src={icono} className={styles.icono} alt="icono" />
     </button>
   );
 }

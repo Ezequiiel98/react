@@ -1,12 +1,13 @@
 import React from 'react';
-import './styles.css';
+
+import styles from './styles.module.scss';
 import Indicador from './components/Indicador';
 
 function IndicadorImagen({ rutasImagenes, indexSeleccionado }) {
   return (
-    <div className="contenedor-indicadores">
+    <div className={styles.contenedorIndicadores}>
       {rutasImagenes.map((e, index) => (
-        <Indicador key={index} grande={index === indexSeleccionado} />
+        <Indicador key={index} grande={index === indexSeleccionado} styles={styles} />
       ))}
     </div>
   );

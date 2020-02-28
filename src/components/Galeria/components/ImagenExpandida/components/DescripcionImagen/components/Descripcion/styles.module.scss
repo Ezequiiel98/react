@@ -1,4 +1,4 @@
-.contenedor-descripcion {
+.contenedorDescripcion {
 	margin-top: 12px;
 	padding: 5px 20px;
 	background-color: rgba(0, 0, 0, 0.63);
@@ -6,15 +6,13 @@
 	animation-name: descripcion;
 	animation-duration: .5s;
 	min-width: 100%;
-}
-
-.contenedor-descripcion>* {
 	text-align: left;
-}
-
-.titulo {
-	margin: 5px;
-	padding: 0;
+	
+	& > [class*="titulo"] {
+		margin: 5px;
+		padding: 0;
+		text-align: left;
+	}
 }
 
 .descripcion {

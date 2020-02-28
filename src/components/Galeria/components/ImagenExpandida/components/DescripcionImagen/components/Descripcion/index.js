@@ -1,12 +1,14 @@
 import React from 'react';
+
 import Titulo from '../../../../../Titulo';
-import './styles.css';
+
+import styles from './styles.module.scss';
 
 function Descripcion({ descripcion: { titulo, descripcion } }) {
   return (
-    <div className="contenedor-descripcion">
+    <div className={styles.contenedorDescripcion}>
       <Titulo titulo={titulo} />
-      <p className="descripcion">{descripcion}</p>
+      <p className={styles.descripcion}>{descripcion}</p>
     </div>
   );
 }

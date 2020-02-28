@@ -1,6 +1,8 @@
 import React from 'react';
+
 import Imagen from '../Imagen';
-import './styles.css';
+
+import styles from './styles.module.scss';
 
 function CuadrillaImagenes({ rutasImagenes, changeState }) {
   const handleClick = (event, index) => {
@@ -11,7 +13,7 @@ function CuadrillaImagenes({ rutasImagenes, changeState }) {
   };
 
   return (
-    <div className="cuadrilla-imagenes">
+    <div className={styles.cuadrilla}>
       {rutasImagenes.map((rutaImagen, index) => (
         <Imagen
           onClick={event => handleClick(event, index)}

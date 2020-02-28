@@ -1,4 +1,4 @@
-.descripcion-imagen {
+.descripcionImagen {
 	position: absolute;
 	max-width: 70%;
 	bottom: 100px;
@@ -7,32 +7,33 @@
 	min-width: 70%;
 }
 
-.btn-descripcion {
+.btnDescripcion {
 	margin: 0;
 	position: relative;
 	bottom: 50px;
 	transform: rotate(-90deg);
 	transition: all .5s ease;
+
+	& > [class*="icono"] {
+		margin-top: 3.3px;
+		position: relative;
+		z-index: -1;
+	}
 }
 
-.btn-descripcion img {
-	margin-top: 5px;
-	position: relative;
-	z-index: -1;
-}
-
-.btn-rotar {
+.btnRotar {
 	top: 0;
-	animation-name: btn-rotar;
+	animation-name: btnRotar;
 	animation-duration: .5s;
+	
+	& > [class*="icono"] {
+		transform: rotate(180deg);
+		margin-right: 15.5px;
+	}
 }
 
-.btn-rotar>* {
-	transform: rotate(180deg);
-	margin-right: 15.5px;
-}
 
-@keyframes btn-rotar {
+@keyframes btnRotar {
 	from {
 		transform: rotate(90deg);
 	}

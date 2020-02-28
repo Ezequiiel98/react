@@ -1,8 +1,7 @@
 import React from 'react';
-import './styles.css';
 
-function Indicador({ grande }) {
-  return <span className={grande ? 'grande' : 'chico'} />;
+function Indicador({ grande, styles }) {
+  return <span className={grande ? styles.grande : styles.chico} />;
 }
 
 export default Indicador;

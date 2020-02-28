@@ -9,14 +9,14 @@
   transition: all .5s ease;
   border: 3px solid white;
   outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+  }
 }
 
-.btn img {
+.icono {
   margin-left: 8px;
   margin-top: 2px;
-}
-
-.btn:hover {
-  cursor: pointer;
-  background-color: black;
 }
