@@ -1,0 +1,44 @@
+.descripcionImagen {
+	position: absolute;
+	max-width: 70%;
+	bottom: 100px;
+	left: 15%;
+	color: white;
+	min-width: 70%;
+}
+
+.btnDescripcion {
+	margin: 0;
+	position: relative;
+	bottom: 50px;
+	transform: rotate(-90deg);
+	transition: all .5s ease;
+
+	& > [class*="icono"] {
+		margin-top: 3.3px;
+		position: relative;
+		z-index: -1;
+	}
+}
+
+.btnRotar {
+	top: 0;
+	animation-name: btnRotar;
+	animation-duration: .5s;
+	
+	& > [class*="icono"] {
+		transform: rotate(180deg);
+		margin-right: 15.5px;
+	}
+}
+
+
+@keyframes btnRotar {
+	from {
+		transform: rotate(90deg);
+	}
+
+	to {
+		transform: rotate(270deg);
+	}
+}

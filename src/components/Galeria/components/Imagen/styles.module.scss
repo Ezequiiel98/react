@@ -1,0 +1,31 @@
+.imagen-cuadrilla {
+	max-width: 95%;
+	margin: 5px;
+	transition: all .5s ease;
+
+	&:hover{
+		cursor: pointer;
+	  filter: drop-shadow(8px 8px 10px black);
+	  transform: scale(1.02);
+	}
+}
+
+.imagen-expandida {
+	max-width: 80vw;
+	min-height: 90vh;
+	object-fit: cover;
+}
+
+@media screen and (min-width: 480px) {
+	.imagen-cuadrilla {
+		max-width: 45%;
+		margin: 5px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.imagen-cuadrilla {
+		max-width: 30%;
+		margin: 5px;
+	}
+}
